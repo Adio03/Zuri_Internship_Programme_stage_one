@@ -2,11 +2,16 @@ package com.example.zuri_internship_project.utils;
 
 import com.example.zuri_internship_project.data.model.Slack;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class Mapper {
     public static Slack map(String slack_name, String track){
@@ -21,14 +26,18 @@ public class Mapper {
         return slack_Response;
     }
     private static String  get_current_day(){
-        DayOfWeek current_Day= LocalDateTime.now().getDayOfWeek();
-        return current_Day.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("en-Ng"));
+        Date date =new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        DateFormat formatter = new SimpleDateFormat("EEEE");
+        return  formatter.format(date);
+
     }
     private static String get_Actual_Time(){
-        LocalDateTime current_utc_Time = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        return current_utc_Time.format(formatter);
-
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss 'Z'");
+        format.setTimeZone(TimeZone.getTimeZone("UTC"));
+        return format.format(date);
     }
 }
 

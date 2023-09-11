@@ -65,5 +65,18 @@ public class Slack {
     public void setStatus_code(int status_code) {
         this.status_code = status_code;
     }
+
+    @Override
+    public String toString() {
+        return "Slack{" +
+                "Slack_name='" + Slack_name + '\'' +
+                ", current_Day='" + current_Day + '\'' +
+                ", current_utc='" + current_utc + '\'' +
+                ", track='" + track + '\'' +
+                ", gitHub_file_url='" + gitHub_file_url + '\'' +
+                ", gitHub_repo_url='" + gitHub_repo_url + '\'' +
+                ", status_code=" + status_code +
+                '}';
+    }
 }
 
