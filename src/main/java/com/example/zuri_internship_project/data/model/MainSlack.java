@@ -1,7 +1,6 @@
 package com.example.zuri_internship_project.data.model;
-//@Getter
-//@Setter
-public class Slack {
+
+public class MainSlack {
     private String Slack_name;
     private String current_Day;
     private String current_utc;
@@ -66,4 +65,3 @@ public class Slack {
         this.status_code = status_code;
     }
 }
-
