@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Slack {
     private String slack_name;
     private String current_day;
-    private String current_utc;
+    private String utc_time;
     private String track;
     private String github_file_url;
     private String github_repo_url;

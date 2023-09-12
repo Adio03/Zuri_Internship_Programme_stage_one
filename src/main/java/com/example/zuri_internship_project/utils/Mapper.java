@@ -13,7 +13,7 @@ public class Mapper {
         Slack slack_Response = new Slack();
         slack_Response.setSlack_name(slack_name);
         slack_Response.setCurrent_day(get_current_day());
-        slack_Response.setCurrent_utc(get_Actual_Time());
+        slack_Response.setUtc_time(get_Actual_Time());
         slack_Response.setTrack(track);
         slack_Response.setGithub_file_url("https://github.com/Adio03/Zuri_Internship_Programme_Stage_One");
         slack_Response.setGithub_repo_url("https://github.com/Adio03/Zuri_Internship_Programme_stage_one/tree/main/src/main/java/com/example/zuri_internship_project/controller");
