@@ -7,11 +7,11 @@ import lombok.Setter;
 @Setter
 public class Slack {
     private String slack_name;
-    private String current_Day;
+    private String current_day;
     private String current_utc;
     private String track;
-    private String gitHub_file_url;
-    private String gitHub_repo_url;
+    private String github_file_url;
+    private String github_repo_url;
     private int status_code;
 
 }
