@@ -28,10 +28,11 @@ public class Mapper {
         return  formatter.format(date);
     }
     private static String get_Actual_Time(){
-        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-        timeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        return timeFormat.format(calendar.getTime());
+           Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+        return formatter.format(date);
+
     }
 }
 
