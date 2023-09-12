@@ -19,7 +19,7 @@ public class SlackController {
     }
     @RequestMapping(value = "/api", method = RequestMethod.GET)
     public ResponseEntity<Slack> getParam(@RequestParam String slack_name, @RequestParam String track){
-        Slack response= slackService.getSlackInformation(slack_name,track);
+        Slack response = slackService.getSlackInformation(slack_name,track);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

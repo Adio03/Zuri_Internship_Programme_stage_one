@@ -4,13 +4,8 @@ import com.example.zuri_internship_project.data.model.Slack;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.TextStyle;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 import java.util.TimeZone;
 
 public class Mapper {
@@ -31,7 +26,6 @@ public class Mapper {
         calendar.setTime(date);
         DateFormat formatter = new SimpleDateFormat("EEEE");
         return  formatter.format(date);
-
     }
     private static String get_Actual_Time(){
         Date date = new Date();
